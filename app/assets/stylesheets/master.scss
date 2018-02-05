@@ -1,13 +1,53 @@
 @import "bootstrap";
 
+/* Sets all margins to 0 */
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
+
 .navbar {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
   box-shadow: 0px 1px 3px #2a2a2a;
-  background: image_url('padded_@2X.png');}
+  background: image_url('binding_dark.png');}
 
 .navbar-inverse a.navbar-brand {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
   color: white;
+}
+
+.hero {
+  background: image_url('hero.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.frosty {
+  background: rgba(0,0,0,0.5);
+}
+
+/* To style frosty h1 tag */
+.frosty h1 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  color: #cbcfd6;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+}
+
+/* To style frosty h2 tag */
+
+.frosty h2 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  color: #cbcfd6;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+}
+
+.btn {
+  border-radius: 0;
 }
