@@ -31,6 +31,11 @@ h1, h2, h3, h4, h5, h6, .navbar {
   background: rgba(0,0,0,0.5);
 }
 
+body {
+  background: image_url('concrete-texture.png');
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+
 /* To style frosty h1 tag */
 .frosty h1 {
   font-family: "Helvetica Neue", Helvetica;
@@ -50,4 +55,10 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn {
   border-radius: 0;
+}
+
+.feature {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
