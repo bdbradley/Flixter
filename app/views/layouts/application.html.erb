@@ -9,7 +9,7 @@
   </head>
 
   <body>
-
+    <div id="flex-content-container">
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,13 +28,48 @@
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
+          <!--Puts that a user is sign in or not signed in-->
+           <ul class="navbar-nav">
+              <% if user_signed_in? %>
+            <li class="nav-item">
+          <!--Lets a user sign out-->
+              <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            </li>
+          <% else %>
+          <!--Lets a user sign in-->
+            <li class="nav-item">
+              <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+            </li>
+          <!--Lets a user sign up-->
+            <li class="nav-item">
+              <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+            </li>
+          <% end %>
+       </ul>
+
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
     </nav>
+      <!--Bootstrap classes for alert and notice, i alert and notice are present then it will
+        output the alert or notice buttons-->
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
+    </div>
+     <div id="footer">
+      <div class="container">
+        <b>Footer Here</b>
+        <br />
+        <%= link_to 'Link', '#' %>
+      </div>
+    </div>
   </body>
 </html>
