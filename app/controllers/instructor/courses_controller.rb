@@ -1,6 +1,7 @@
 class Instructor::CoursesController < ApplicationController
   #Means user has to be signed in, in order to access this page
   before_action :authenticate_user!
+  before_action :require_authorized_for_current_course, only: [:show]
 
   def new
     @course = Course.new 
@@ -16,11 +17,18 @@ class Instructor::CoursesController < ApplicationController
     end
   end
 
-  def show
-    @course = Course.find(params[:id])
+  private
+
+  def require_authorized_for_current_course
+    if current_course.user != current_user
+      render plain: "Unauthorized", status: :unauthorized 
+    end
   end
 
-  private
+  helper_method :current_course
+  def current_course
+    @current_course ||= Course.find(params[:id])
+  end
 
   def course_params
     params.require(:course).permit(:title, :description, :cost)
