@@ -2,6 +2,12 @@
 
 <div class="booyah-box col-10 offset-1">
   <h1><%= @course.title %></h1>
+  <%= image_tag @course.image, class: 'img-fluid' %>
+  <br />
+  <div class="row">
+    <div class="col-sm-4 col-12">
+      <span class="badge badge-default">
+
 <br />
 <div class="row">
   <div class="col-sm-4 col-12 text-center">
@@ -10,6 +16,7 @@
   <!--Calling num to currency function to set cost-->
     <%= number_to_currency @course.cost %>
 </div>
+
   </span>
     <!--If you're logged in and also created the course, then Admin link shows up to go to instructor page-->
   <% if current_user && current_user == @course.user %>
