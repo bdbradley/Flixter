@@ -17,13 +17,15 @@ gem 'sass-rails', '~> 5.0'
 #To add user authentication log in and log out
 gem'devise'
 
+gem 'carrierwave-aws'
+
 gem "mini_magick"
 
 #To add form gem 
 gem 'simple_form'
-
+#Uses for integration with AWS3 server?
 gem "fog-aws"
-
+#Used for security keys?
 gem "figaro"
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
