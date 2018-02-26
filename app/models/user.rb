@@ -7,9 +7,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-#Loops through empty array of enrolled courses and pushes each
-#course user(student) is enrolled in into the array
-#.collect method stores the enrollments in the enrolled_courses variable
+#if enrolled in course, loops through courses, if course 
+#is in courses then it's included in enrolled_courses
     def enrolled_in?(course)
     return enrolled_courses.include?(course)
     end
