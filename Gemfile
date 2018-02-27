@@ -16,6 +16,9 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 #To add user authentication log in and log out
 gem'devise'
+
+gem 'jquery-ui-rails'
+
 #for ranking things
 gem 'ranked-model'
 #for payments
