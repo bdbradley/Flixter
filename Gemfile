@@ -16,9 +16,11 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 #To add user authentication log in and log out
 gem'devise'
-
+#for ranking things
+gem 'ranked-model'
+#for payments
 gem 'stripe'
-
+#for adding pics / video
 gem 'carrierwave-aws'
 
 gem "mini_magick"
