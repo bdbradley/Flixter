@@ -17,6 +17,8 @@ gem 'sass-rails', '~> 5.0'
 #To add user authentication log in and log out
 gem'devise'
 
+gem "font-awesome-rails"
+
 gem 'jquery-ui-rails'
 
 #for ranking things

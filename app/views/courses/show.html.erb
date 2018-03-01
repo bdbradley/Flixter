@@ -46,29 +46,28 @@
     </div>
   </div>
 
-  <div class="col-12">
-    <% @course.sections.each do |section| %>
+    <div class="col-12">
+    <% @course.sections.rank(:row_order).each do |section| %>
     <br /><br />
       <div class="section">
         <h3>
           <%= section.title %>
         </h3>
         <div class="row">
-          <!--Sorts lesson by row order using rankedmodel gem-->
-           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <div class="col-12 col-sm-6">
-              <div class="lesson text-center">
-                <br />
-                <%= link_to lesson_path(lesson) do %>
-                  <b><%= lesson.title %></b>
-                  <br />
-                  <%= lesson.subtitle %>
-                <% end %>
-              </div>
+        <% section.lessons.rank(:row_order).each do |lesson| %>
+         <div class="col-12 col-sm-6">
+          <div class="lesson text-center">
+            <br />
+            <%= link_to lesson_path(lesson) do %>
+              <b><%= lesson.title %></b>
+               <br />
+              <%= lesson.subtitle %>
+            <% end %>
+          </div>
             </div>
-          <% end %>
+        <% end %>
         </div>
-        <br class="clr" />
+         <br class="clr" />
       </div>
     <% end %>
   </div>
