@@ -5,7 +5,6 @@ class EnrollmentsController < ApplicationController
     #Do below if course premium
     if current_course.premium?
 
-
     # Amount in cents
     @amount = 500
 
@@ -20,7 +19,7 @@ class EnrollmentsController < ApplicationController
       #Sets what value name is when cust charged
       description: 'Flixter Premo Content',
       #Sets amount of course price
-      data-amount="<%= (@course.cost * 100).to_i %>"
+      
       currency: 'usd'
     )
   end

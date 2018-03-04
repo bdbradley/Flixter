@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resource :dashboard, only: [:show]
   #Shows the index.html.erb view from the static_pages controller 
   root 'static_pages#index'
   resources :courses, only: [:index, :show] do
