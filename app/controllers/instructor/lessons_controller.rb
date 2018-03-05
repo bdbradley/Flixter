@@ -4,12 +4,7 @@ class Instructor::LessonsController < ApplicationController
   #Makes sure user authorized but only for new and create actions
   before_action :require_authorized_for_current_section, only: [:new, :create]
   before_action :require_authorized_for_current_lesson, only: [:update]
-  def new
-      #Have to have this form template before we can add it to the view
-    #in view/instructors/lessons/new.html.erb
-    #The code below builds a new blank lesson
-    @lesson = Lesson.new
-  end
+  
 
 
   def create
