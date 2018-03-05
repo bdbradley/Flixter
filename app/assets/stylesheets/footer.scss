@@ -30,3 +30,8 @@ body {
 .social-button {
   margin: 4px;
 }
+
+/* Takes away the underline in the footer links when you hover */
+.social a:hover {
+  text-decoration: none;
+}

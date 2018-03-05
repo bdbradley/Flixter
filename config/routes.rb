@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resource :dashboard, only: [:show]
   #Shows the index.html.erb view from the static_pages controller 
   root 'static_pages#index'
+  get 'privacy', to: 'static_pages#privacy'
   resources :courses, only: [:index, :show] do
   resources :enrollments, only: :create
   end
